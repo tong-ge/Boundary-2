@@ -4,7 +4,7 @@ import java.util.Date;
 import java.util.TimerTask;
 
 public class ModTimer extends java.util.Timer {
-    public void schedule(Task task, Date time) {
+    public void schedule(Runnable task, Date time) {
         super.schedule(new TimerTask() {
             @Override
             public void run() {
@@ -13,7 +13,7 @@ public class ModTimer extends java.util.Timer {
         }, time);
     }
 
-    public void schedule(Task task, long delay) {
+    public void schedule(Runnable task, long delay) {
         super.schedule(new TimerTask() {
             @Override
             public void run() {
@@ -21,7 +21,7 @@ public class ModTimer extends java.util.Timer {
             }
         }, delay);
     }
-    public void schedule(Task task, long delay, long period) {
+    public void schedule(Runnable task, long delay, long period) {
         super.schedule(new TimerTask() {
             @Override
             public void run() {
@@ -30,7 +30,7 @@ public class ModTimer extends java.util.Timer {
         }, delay, period);
     }
 
-    public void schedule(Task task, Date firstTime, long period) {
+    public void schedule(Runnable task, Date firstTime, long period) {
         super.schedule(new TimerTask() {
             @Override
             public void run() {
